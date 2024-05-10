@@ -4,6 +4,7 @@ import brainwaveSymbol from "./brainwave-symbol.svg";
 import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
 import play from "./play.svg";
 import gradient from "./gradient.png";
+import gradientHero from "./gradientHero.png"
 import smallSphere from "./4-small.png";
 import grid from "./grid.png";
 import check2 from "./check-02.svg";
@@ -82,6 +83,7 @@ export {
   brainwaveWhiteSymbol,
   play,
   gradient,
+  gradientHero,
   smallSphere,
   grid,
   yourlogo,
