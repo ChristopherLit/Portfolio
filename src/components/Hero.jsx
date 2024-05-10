@@ -8,6 +8,7 @@ import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
+import Generating from "./Generating";
 
 const RedoAnimText = () => {
   const textIndex = useMotionValue(0);
@@ -103,6 +104,8 @@ const Hero = () => {
                   alt="AI"
                 />
 
+                <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2"/>
+
                 <ScrollParallax isAbsolutelyPositioned>
                 <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
                   {heroIcons.map((icon, index) => (
@@ -119,6 +122,8 @@ const Hero = () => {
 
               </div>
               </div>
+
+                <Gradient />
               </div>
 
               <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
@@ -132,9 +137,11 @@ const Hero = () => {
 
 
               </div>
+              <BackgroundCircles />
               </div>
 
         </div>
+        <BottomLine />
       </Section>
     );
   };
