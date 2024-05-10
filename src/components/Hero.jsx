@@ -6,11 +6,11 @@ import { curve } from "../assets";
 const RedoAnimText = () => {
   const textIndex = useMotionValue(0);
   const texts = [
-    " software developer",
-    " full stack developer",
-    " web app developer",
-    " mobile app developer",
-    " cat enthusiast (and dogs)",
+    "software developer",
+    "full stack developer",
+    "web app developer",
+    "mobile app developer",
+    "cat enthusiast (and dogs)",
   ];
 
   const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
@@ -64,12 +64,22 @@ const Hero = () => {
       >
         <div className="container relative">
           <div className="relative z-1 max-w-[70rem] mx-auto text-center mb-[14rem] md:mb-25 lg:mb-[13rem]" style={{ textAlign: 'center' }}> {/* Centering the text */}
-            <h1 className="h1 mb-6">Hi, I'm Christopher</h1>
-            <h1 className="h1 mb-6" style={{ position: 'absolute', left: '10%', textAlign: 'left' }}> {}
-              I'm a 
-              <RedoAnimText>
-                <img src={curve} alt="Curve" />
-              </RedoAnimText>
+            <h1 className="h1 mb-6">Hi, I'm{" "}
+            <span className="inline-block relative">
+              Christopher{" "}
+              <img
+                src={curve}
+                className="absolute top-full left-0 w-full xl:-mt-2"
+                width={624}
+                height={28}
+                alt="Curve"
+              />
+            </span>
+            
+            </h1>
+            <h1 className="h1 mb-6" style={{ position: 'absolute', left: '14%', textAlign: 'left' }}> {}
+              I'm a{" "}
+              <RedoAnimText></RedoAnimText>
             </h1>
           </div>
         </div>
