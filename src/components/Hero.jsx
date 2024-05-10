@@ -1,14 +1,16 @@
 import { useEffect } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import Section from "./Section";
+import { curve } from "../assets";
 
 const RedoAnimText = () => {
   const textIndex = useMotionValue(0);
   const texts = [
     " software developer",
     " full stack developer",
-    " web developer",
-    " mobile app developer"
+    " web app developer",
+    " mobile app developer",
+    " cat enthusiast (and dogs)",
   ];
 
   const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
@@ -45,32 +47,35 @@ const RedoAnimText = () => {
 
   return (
     <motion.span className="inline">
-      {displayText}
+      {displayText} 
     </motion.span>
   );
 };
 
 const Hero = () => {
-  return (
-    <Section
-      className="pt-[12rem] -mt-[5.25rem] flex justify-center" // Centering the content
-      crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
-      customPaddings
-      id="hero"
-      style={{ position: 'relative' }} // Added inline style to set position to relative
-    >
-      <div className="container relative">
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[9rem] md:mb-25 lg:mb-[11rem]" style={{ textAlign: 'center' }}> {/* Centering the text */}
-          <h1 className="h1 mb-6">Hi, I'm Christopher</h1>
-          <h1 className="h1 mb-6" style={{ position: 'absolute', left: '10%', textAlign: 'left' }}> {/* Adjusted left property */}
-            I'm a 
-            <RedoAnimText />
-          </h1>
+    return (
+      <Section
+        className="pt-[12rem] -mt-[5.25rem] flex justify-center"
+        crosses
+        crossesOffset="lg:translate-y-[5.25rem]"
+        customPaddings
+        id="hero"
+        style={{ position: 'relative' }}
+      >
+        <div className="container relative">
+          <div className="relative z-1 max-w-[70rem] mx-auto text-center mb-[14rem] md:mb-25 lg:mb-[13rem]" style={{ textAlign: 'center' }}> {/* Centering the text */}
+            <h1 className="h1 mb-6">Hi, I'm Christopher</h1>
+            <h1 className="h1 mb-6" style={{ position: 'absolute', left: '10%', textAlign: 'left' }}> {}
+              I'm a 
+              <RedoAnimText>
+                <img src={curve} alt="Curve" />
+              </RedoAnimText>
+            </h1>
+          </div>
         </div>
-      </div>
-    </Section>
-  );
-};
-
-export default Hero;
+      </Section>
+    );
+  };
+  
+  export default Hero;
+  
