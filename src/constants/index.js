@@ -13,9 +13,9 @@ import {
     github,
     homeSmile,
     linkedin,
+    notification1,
     notification2,
     notification3,
-    notification4,
     notion,
     photoshop,
     plusSquare,
@@ -60,7 +60,7 @@ import {
   
   export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
   
-  export const notificationImages = [notification4, notification3, notification2];
+  export const notificationImages = [notification1, notification2, notification3];
   
   export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
   
