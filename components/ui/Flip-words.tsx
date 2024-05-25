@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
@@ -19,8 +19,19 @@ export const FlipWords = ({
   useEffect(() => {
     startAnimation();
 
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        clearInterval(interval);
+      } else {
+        startAnimation();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     return () => {
       clearInterval(interval);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 
