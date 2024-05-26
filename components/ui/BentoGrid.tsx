@@ -12,6 +12,7 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { EvervaultCard, Icon } from "../ui/evervault-card";
+import { Meteors } from "./meteors";
 
 export const BentoGrid = ({
   className,
@@ -170,6 +171,7 @@ export const BentoGridItem = ({
               </div>
             </div>
           )}
+          {id === 4 && <Meteors />}
           {id === 6 && (
             <div className="mt-5 relative">
               <div
