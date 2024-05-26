@@ -136,7 +136,7 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 1 &&  <EvervaultCard text="hover"/>}
+          {id === 1 &&  <EvervaultCard text="hover" className="py-10"/>}
           
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}
