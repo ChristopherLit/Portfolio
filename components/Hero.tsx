@@ -3,7 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
+import { BackgroundGradientAnimation } from "./ui/Background-gradient-animation";
 import { FlipWords } from "./ui/Flip-words";
 
 const Hero = () => {
@@ -11,7 +11,6 @@ const Hero = () => {
 
   return (
 
-   
     <div className="pb-20 pt-36">
        
       <div>
