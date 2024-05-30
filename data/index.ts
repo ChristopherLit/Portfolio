@@ -215,3 +215,33 @@ export const navItems = [
       img: "/link.svg",
     },
   ];
+
+  export const navigation = [
+    {
+      id: "0",
+      title: "About",
+      url: "#About",
+    },
+    {
+      id: "1",
+      title: "Experience",
+      url: "#experience",
+    },
+    {
+      id: "2",
+      title: "Projects",
+      url: "#projects",
+    },
+    {
+      id: "3",
+      title: "Skills",
+      url: "#skills",
+    },
+    {
+      id: "4",
+      title: "Contact",
+      url: "#contact",
+  
+    },
+
+  ];
